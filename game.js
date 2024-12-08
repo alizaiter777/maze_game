@@ -1,25 +1,39 @@
 
-is_game_running=false;
+let score=0;
+let is_game_running=false;
 
 let end;
 let start;
 let boundaries;
+let status_display; 
 
 document.addEventListener("DOMContentLoaded", loadPage);
+
+
+
+function displayScore(message){
+    if(message != "")
+        status_display.innerHTML = message + "<br/>" + "Your Score is: " + score;
+}
 
 
 function endGame(){
     if(is_game_running){
         for(let i = 0; i < boundaries.length; i++)
             boundaries[i].style.backgroundColor = "rgb(113 225 141)"; 
+        score = score + 5;
+        displayScore("You Won!");
     }
+    
 }
 
 
 function gameOver(){
     if(is_game_running){
         for(let i = 0; i < boundaries.length; i++)
-            boundaries[i].style.backgroundColor = "rgb(243, 159, 159)";  
+            boundaries[i].style.backgroundColor = "rgb(243, 159, 159)"; 
+        score = score - 1 ;
+        displayScore("You Lose :("); 
     }
 }
 
@@ -35,6 +49,7 @@ function loadPage(){
     end = document.getElementById("end");
     start = document.getElementById("start");
     boundaries = document.getElementsByClassName("boundary");
+    status_display =  document.getElementById("status");
     
     start.addEventListener("click", startGame);
     end.addEventListener("mouseover", endGame);
