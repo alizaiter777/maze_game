@@ -32,7 +32,8 @@ function gameOver(){
     if(is_game_running){
         for(let i = 0; i < boundaries.length; i++)
             boundaries[i].style.backgroundColor = "rgb(243, 159, 159)"; 
-        score = score - 1 ;
+        if(score > 0)
+        score = score - 1;
         displayScore("You Lose :("); 
     }
 }
