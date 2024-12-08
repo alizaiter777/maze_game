@@ -23,6 +23,7 @@ function endGame(){
             boundaries[i].style.backgroundColor = "rgb(113 225 141)"; 
         score = score + 5;
         displayScore("You Won!");
+        is_game_running=false;
     }
     
 }
@@ -35,6 +36,7 @@ function gameOver(){
         if(score > 0)
         score = score - 1;
         displayScore("You Lose :("); 
+        is_game_running=false;
     }
 }
 
