@@ -29,6 +29,8 @@ function loadPage(){
     boundaries = document.getElementsByClassName("boundary");
     
     start.addEventListener("click", startGame);
-
+    for(let i = 0; i < boundaries.length; i++){
+        boundaries[i].addEventListener("mouseover", gameOver);
+    }
     
 }
