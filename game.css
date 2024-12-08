@@ -30,6 +30,12 @@ p {
 	text-align: center;
 }
 
+#s_box {
+	background-color: #88ff88;
+	right: 1;
+    margin-left: 420px;
+}
+
 #game #start {
 	background-color: #88ff88;
 	left: 0;
