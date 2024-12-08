@@ -3,7 +3,7 @@ let end;
 let start;
 let boundaries;
 
-
+document.addEventListener("DOMContentLoaded", loadPage);
 
 function startGame(){
     for(let i = 0; i < boundaries.length; i++)
