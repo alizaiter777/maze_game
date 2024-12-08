@@ -16,7 +16,7 @@ p {
 	width: 500px;
 }
 
-#start, #end {
+#start, #end ,#s_box{
 	position: absolute;
 	top: 205px;
 	height: 30px;
