@@ -51,11 +51,13 @@ function startGame(){
 function loadPage(){
     end = document.getElementById("end");
     start = document.getElementById("start");
+    s_box = document.getElementById("s_box");
     boundaries = document.getElementsByClassName("boundary");
     status_display =  document.getElementById("status");
     
     start.addEventListener("click", startGame);
     end.addEventListener("mouseover", endGame);
+    s_box.addEventListener("mouseover",endGame);
     for(let i = 0; i < boundaries.length; i++){
         boundaries[i].addEventListener("mouseover", gameOver);
     }
