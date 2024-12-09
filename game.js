@@ -62,7 +62,9 @@ function resetGame(){
     if(x==1){
         start.style.display="block";
         s_box.style.display="none";
+        // add start function to regive the start box the apportunity to restrat the game 
         startGame()
+        //on click the reset button the game start whenever you hover  then adding this boolean to start onclick 
         is_game_running = false;
     }
 }
