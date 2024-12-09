@@ -12,7 +12,14 @@ document.addEventListener("DOMContentLoaded", loadPage);
 
 
 
-
+function resetGame(){
+    if(x==1){
+        start.style.display="block";
+        s_box.style.display="none";
+        startGame()
+        is_game_running = false;
+    }
+}
 function displayScore(message){
     if(message != "")
         status_display.innerHTML = message + "<br/>" + "Your Score is: " + score;
