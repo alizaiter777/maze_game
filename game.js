@@ -12,14 +12,7 @@ document.addEventListener("DOMContentLoaded", loadPage);
 
 
 
-function resetGame(){
-    if(x==1){
-        start.style.display="block";
-        s_box.style.display="none";
-        startGame()
-        is_game_running = false;
-    }
-}
+
 function displayScore(message){
     if(message != "")
         status_display.innerHTML = message + "<br/>" + "Your Score is: " + score;
@@ -55,11 +48,21 @@ function gameOver(){
 
 
 function startGame(){
+    displayScore("")
     is_game_running=true;
+    reset.style.display="none";
     for(let i = 0; i < boundaries.length; i++)
         boundaries[i].style.backgroundColor = "#eeeeee"; 
 }
 
+function resetGame(){
+    if(x==1){
+        start.style.display="block";
+        s_box.style.display="none";
+        startGame()
+        is_game_running = false;
+    }
+}
 
 function loadPage(){
     end = document.getElementById("end");
