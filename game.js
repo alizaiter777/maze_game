@@ -23,6 +23,8 @@ function endGame(){
             boundaries[i].style.backgroundColor = "rgb(113 225 141)"; 
         score = score + 5;
         displayScore("You Won!");
+        start.style.display="none";
+        s_box.style.display="block";
         is_game_running=false;
     }
     
