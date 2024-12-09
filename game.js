@@ -2,12 +2,14 @@
 let score=0;
 let is_game_running=false;
 
+let x;
 let end;
 let start;
 let boundaries;
 let status_display; 
 
 document.addEventListener("DOMContentLoaded", loadPage);
+
 
 
 
