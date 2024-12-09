@@ -48,6 +48,7 @@ function gameOver(){
         if(score > 0)
         score = score - 1;
         displayScore("You Lose :("); 
+        reset.style.display="none";
         is_game_running=false;
     }
 }
