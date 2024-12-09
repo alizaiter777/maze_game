@@ -20,6 +20,7 @@ function displayScore(message){
 
 
 function endGame(){
+
     if(is_game_running){
         for(let i = 0; i < boundaries.length; i++)
             boundaries[i].style.backgroundColor = "rgb(113 225 141)"; 
@@ -29,6 +30,7 @@ function endGame(){
         s_box.style.display="block";
         reset.style.display="block";
         is_game_running=false;
+        x=1;
     }
     
 }
@@ -43,12 +45,13 @@ function gameOver(){
         displayScore("You Lose :("); 
         reset.style.display="none";
         is_game_running=false;
+        x=0;
     }
 }
 
 
 function startGame(){
-    displayScore("")
+    displayScore("");
     is_game_running=true;
     reset.style.display="none";
     for(let i = 0; i < boundaries.length; i++)
