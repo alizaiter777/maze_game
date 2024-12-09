@@ -34,6 +34,7 @@ function endGame(){
         displayScore("You Won!");
         start.style.display="none";
         s_box.style.display="block";
+        reset.style.display="block";
         is_game_running=false;
     }
     
@@ -63,12 +64,14 @@ function loadPage(){
     end = document.getElementById("end");
     start = document.getElementById("start");
     s_box = document.getElementById("s_box");
+    reset = document.getElementById("reset");
     boundaries = document.getElementsByClassName("boundary");
     status_display =  document.getElementById("status");
     
     start.addEventListener("click", startGame);
     end.addEventListener("mouseover", endGame);
     s_box.addEventListener("mouseover",endGame);
+    reset.addEventListener("click",resetGame);
     for(let i = 0; i < boundaries.length; i++){
         boundaries[i].addEventListener("mouseover", gameOver);
     }

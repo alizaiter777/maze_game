@@ -55,6 +55,11 @@ div.boundary.example {
 	margin: auto;
 	width: 100px;
 	height: 25px;
+    display:none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #eeeeee;
 }
 
 div.youlose {
