@@ -54,6 +54,7 @@ function startGame(){
     displayScore("");
     is_game_running=true;
     reset.style.display="none";
+    arrow.style.display="none";
     for(let i = 0; i < boundaries.length; i++)
         boundaries[i].style.backgroundColor = "#eeeeee"; 
 }
