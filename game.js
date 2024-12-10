@@ -60,6 +60,9 @@ function gameOver(){
 
 
 function startGame(){
+    count=100;
+    second=5;
+    stopWatch();
     displayScore("");
     timer=true;
     is_game_running=true;
