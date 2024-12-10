@@ -86,7 +86,14 @@ function stopWatch(){
                 count = 100;
             }
     
-           
+            let secString = second;
+            let countString = count;
+    
+            document.getElementById('sec').innerHTML = secString;
+            document.getElementById('count').innerHTML = countString;
+            setTimeout(stopWatch,10);
+
+
          }
         }
 
