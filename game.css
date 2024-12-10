@@ -118,3 +118,35 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	height: 150px;
 	width: 98px;
 }
+
+
+
+.flex-container {
+    display: flex;
+   
+    align-items: center;
+    width: 20%;
+    height: 10vh;
+    margin-left: 550px;
+  
+}
+
+.digit {
+    font-size: 30px;
+    color: #fff;
+}
+
+  .column-left {
+    flex: 0 0 50%; 
+    background-color: #88ff88;
+    text-align: center;
+   
+  }
+  
+  .column-right {
+    flex: 0 0 50%; 
+    background-color: #8888ff;
+    text-align: center;
+    
+   
+  }
