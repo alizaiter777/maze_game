@@ -57,6 +57,7 @@ function gameOver(){
 
 function startGame(){
     displayScore("");
+    // timer start with game
     timer=true;
     is_game_running=true;
     reset.style.display="none";
@@ -91,7 +92,23 @@ function stopWatch(){
     
             document.getElementById('sec').innerHTML = secString;
             document.getElementById('count').innerHTML = countString;
-            setTimeout(stopWatch,10);
+            setTimeout(stopWatch,10); 
+
+        // if timer is 0 and still playing or mouseover boundries then lose 
+        if((second==0 && x==2) || x==0) {
+            gameOver();
+            timer=false;
+
+        }
+        // if timer greater than 0 and mouseover E box  then winnnn
+         elif(second>0 && x==1)
+            endGame();
+            timer=false;
+         // if timer 0 and mouseover E box then lose 
+         elif(second==0 && x==1) 
+             gameOver();
+             timer=false;
+         
 
 
          }
