@@ -1,12 +1,17 @@
 
 let score=0;
+let count = 100;
+let timer = false;
+let second = 5;
 let is_game_running=false;
+
 
 let x;
 let end;
 let start;
 let boundaries;
 let status_display; 
+
 
 document.addEventListener("DOMContentLoaded", loadPage);
 
@@ -52,6 +57,7 @@ function gameOver(){
 
 function startGame(){
     displayScore("");
+    timer=true;
     is_game_running=true;
     reset.style.display="none";
     arrow.style.display="none";
@@ -69,8 +75,14 @@ function resetGame(){
         is_game_running = false;
     }
 }
+ 
+
+
+
+       
 
 function loadPage(){
+    
     end = document.getElementById("end");
     start = document.getElementById("start");
     s_box = document.getElementById("s_box");
@@ -78,10 +90,12 @@ function loadPage(){
     boundaries = document.getElementsByClassName("boundary");
     status_display =  document.getElementById("status");
     
+    
     start.addEventListener("click", startGame);
     end.addEventListener("mouseover", endGame);
     s_box.addEventListener("mouseover",endGame);
     reset.addEventListener("click",resetGame);
+    
     for(let i = 0; i < boundaries.length; i++){
         boundaries[i].addEventListener("mouseover", gameOver);
     }
