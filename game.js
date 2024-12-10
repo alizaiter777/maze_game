@@ -60,6 +60,7 @@ function gameOver(){
 
 
 function startGame(){
+    x=2;
     count=100;
     second=5;
     stopWatch();
@@ -102,8 +103,11 @@ function stopWatch(){
             document.getElementById('count').innerHTML = countString;
             setTimeout(stopWatch,10); 
 
-            //
-        
+            
+         if (second==0 && x==2){
+             timer=false;
+             gameOver();
+         }
 
          }
         }
