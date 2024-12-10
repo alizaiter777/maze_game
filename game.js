@@ -76,7 +76,19 @@ function resetGame(){
     }
 }
  
-
+function stopWatch(){
+   
+        if (timer) {
+            count--;
+    
+            if (count == 00) {
+                second--;
+                count = 100;
+            }
+    
+           
+         }
+        }
 
 
        
