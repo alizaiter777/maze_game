@@ -35,6 +35,7 @@ function endGame(){
         s_box.style.display="block";
         reset.style.display="block";
         is_game_running=false;
+        timer=false;
         x=1;
     }
     
@@ -42,6 +43,7 @@ function endGame(){
 
 
 function gameOver(){
+    
     if(is_game_running){
         for(let i = 0; i < boundaries.length; i++)
             boundaries[i].style.backgroundColor = "rgb(243, 159, 159)"; 
@@ -50,14 +52,15 @@ function gameOver(){
         displayScore("You Lose :("); 
         reset.style.display="none";
         is_game_running=false;
+        timer=false;
         x=0;
+
     }
 }
 
 
 function startGame(){
     displayScore("");
-    // timer start with game
     timer=true;
     is_game_running=true;
     reset.style.display="none";
@@ -67,13 +70,15 @@ function startGame(){
 }
 
 function resetGame(){
-    if(x==1){
+    if(x==1 ){
         start.style.display="block";
         s_box.style.display="none";
         // add start function to regive the start box the apportunity to restrat the game 
         startGame()
         //on click the reset button the game start whenever you hover  then adding this boolean to start onclick 
         is_game_running = false;
+        timer= false;
+       
     }
 }
  
@@ -94,22 +99,8 @@ function stopWatch(){
             document.getElementById('count').innerHTML = countString;
             setTimeout(stopWatch,10); 
 
-        // if timer is 0 and still playing or mouseover boundries then lose 
-        if((second==0 && x==2) || x==0) {
-            gameOver();
-            timer=false;
-
-        }
-        // if timer greater than 0 and mouseover E box  then winnnn
-         elif(second>0 && x==1)
-            endGame();
-            timer=false;
-         // if timer 0 and mouseover E box then lose 
-         elif(second==0 && x==1) 
-             gameOver();
-             timer=false;
-         
-
+            //
+        
 
          }
         }
